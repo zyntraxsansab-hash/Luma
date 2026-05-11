@@ -690,12 +690,60 @@ button {
   margin: 4px 0 6px;
 }
 
-.cov-card__addr,
-.cov-card__hours {
+.cov-card__addr {
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--ink-soft);
   margin: 0;
+  hyphens: none;
+  word-break: keep-all;
+}
+
+.cov-card__map {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--luma-blue);
+  text-decoration: none;
+  margin-top: 2px;
+  width: fit-content;
+  transition:
+    gap 0.25s var(--easing),
+    opacity 0.25s var(--easing);
+}
+
+.cov-card__map svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.25s var(--easing);
+}
+
+.cov-card__map:hover {
+  gap: 10px;
+}
+
+.cov-card__map:hover svg {
+  transform: translateX(2px);
+}
+
+.cov-card__hours {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 6px 0 0;
+}
+
+.cov-card__hours-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--luma-blue);
+  flex-shrink: 0;
 }
 
 /* =========================================================
