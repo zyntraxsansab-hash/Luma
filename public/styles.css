@@ -391,11 +391,11 @@ button {
 }
 
 .hero__title {
-  font-family: "Fraunces", serif;
+  font-family: "Instrument Serif", "Fraunces", serif;
   font-weight: 400;
   font-size: clamp(40px, 7vw, 84px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  line-height: 1.0;
+  letter-spacing: -0.015em;
   margin: 0;
   max-width: 1100px;
 }
