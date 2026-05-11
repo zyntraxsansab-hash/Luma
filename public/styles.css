@@ -383,7 +383,7 @@ button {
   margin: 0 auto 40px;
   padding: 48px 80px;
   border-radius: 32px;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
