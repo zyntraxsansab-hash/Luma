@@ -632,6 +632,83 @@ button {
   margin: 0;
 }
 
+.serve-card--solo {
+  grid-column: 2 / 3;
+}
+
+/* =========================================================
+   Catálogo — +1,100 productos
+   ========================================================= */
+
+.catalog {
+  padding: 140px 0;
+}
+
+.catalog__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.catalog__inner .badge {
+  align-self: center;
+}
+
+.catalog__number {
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  font-size: clamp(80px, 14vw, 180px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--luma-blue);
+  margin: 8px 0 0;
+}
+
+.catalog__label {
+  font-family: "Fraunces", serif;
+  font-weight: 300;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.catalog__desc {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 600px;
+  margin: 12px auto 0;
+}
+
+.catalog__tags {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.catalog__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--luma-blue);
+  background: var(--white);
+  color: var(--luma-blue);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
 /* =========================================================
    Cobertura
    ========================================================= */
@@ -1155,6 +1232,14 @@ button {
   .serve-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .serve-card--solo {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 12px);
+  }
+  .catalog {
+    padding: 110px 0;
+  }
   .nosotros__grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1229,6 +1314,13 @@ button {
   }
   .serve-grid {
     grid-template-columns: 1fr;
+  }
+  .serve-card--solo {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+  .catalog {
+    padding: 88px 0;
   }
   .footer__grid {
     grid-template-columns: 1fr;

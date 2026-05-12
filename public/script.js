@@ -6,7 +6,7 @@
 
 import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.mjs";
 
-const WA_BASE = "https://wa.me/525549591723?text=";
+const WA_BASE = "https://wa.me/525636558641?text=";
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
@@ -167,6 +167,37 @@ gsap.utils.toArray("[data-reveal]").forEach((el) => {
     },
   });
 });
+
+/* ===== Catálogo — count-up desde 0 hasta el target ===== */
+
+const catalogCountEl = document.querySelector("[data-catalog-count]");
+if (catalogCountEl) {
+  const target = parseInt(catalogCountEl.dataset.target, 10) || 1100;
+  const formatter = new Intl.NumberFormat("es-MX");
+  const render = (n) => {
+    catalogCountEl.textContent = "+" + formatter.format(Math.round(n));
+  };
+
+  if (prefersReducedMotion) {
+    render(target);
+  } else {
+    render(0);
+    const obj = { val: 0 };
+    ScrollTrigger.create({
+      trigger: catalogCountEl,
+      start: "top 85%",
+      once: true,
+      onEnter: () => {
+        gsap.to(obj, {
+          val: target,
+          duration: 2,
+          ease: "power2.out",
+          onUpdate: () => render(obj.val),
+        });
+      },
+    });
+  }
+}
 
 /* ===== Float infinito — íconos de "A quién servimos" ===== */
 
