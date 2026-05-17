@@ -710,79 +710,39 @@ button {
 }
 
 /* =========================================================
-   Price-match badge (gold)
+   Price-match badge (informativo, sutil)
    ========================================================= */
 
 .price-badge {
-  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 28px;
-  padding: 12px 22px;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 9px 18px;
   border-radius: var(--r-pill);
-  background: linear-gradient(135deg, #d8b25c 0%, #c9a24c 50%, #b18a36 100%);
-  color: #fff;
+  background: var(--luma-blue-soft);
+  border: 1px solid rgba(14, 77, 164, 0.18);
+  color: var(--luma-blue);
   font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  box-shadow:
-    0 10px 30px -10px rgba(201, 162, 76, 0.55),
-    0 0 0 1px rgba(255, 255, 255, 0.18) inset;
-  z-index: 1;
-  animation: price-badge-pulse 2.6s var(--easing) infinite;
-}
-
-.price-badge::before {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border-radius: var(--r-pill);
-  background: radial-gradient(
-    closest-side,
-    rgba(201, 162, 76, 0.35),
-    rgba(201, 162, 76, 0) 70%
-  );
-  z-index: -1;
-  pointer-events: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1;
 }
 
 .price-badge__icon {
-  width: 18px;
-  height: 18px;
-  color: #fff;
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.18));
 }
 
 .price-badge--on-blue {
-  margin: 0 auto 28px;
-  background: linear-gradient(135deg, #e6c275 0%, #c9a24c 50%, #a8842f 100%);
-  box-shadow:
-    0 14px 36px -10px rgba(201, 162, 76, 0.75),
-    0 0 0 1px rgba(255, 255, 255, 0.25) inset;
-}
-
-@keyframes price-badge-pulse {
-  0%, 100% {
-    transform: translateY(0);
-    box-shadow:
-      0 10px 30px -10px rgba(201, 162, 76, 0.55),
-      0 0 0 1px rgba(255, 255, 255, 0.18) inset;
-  }
-  50% {
-    transform: translateY(-2px);
-    box-shadow:
-      0 16px 40px -10px rgba(201, 162, 76, 0.7),
-      0 0 0 1px rgba(255, 255, 255, 0.28) inset;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .price-badge {
-    animation: none;
-  }
+  margin: 0 auto 22px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 /* =========================================================
@@ -1034,7 +994,8 @@ button {
 .contact__title,
 .contact__subtitle,
 .contact__btn,
-.contact__phone {
+.contact__phone,
+.contact__inner .price-badge {
   position: relative;
   z-index: 1;
 }
