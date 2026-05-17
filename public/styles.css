@@ -745,6 +745,20 @@ button {
   -webkit-backdrop-filter: blur(4px);
 }
 
+.price-badge--lg {
+  margin: 28px auto 8px;
+  padding: 15px 30px;
+  gap: 10px;
+  font-size: clamp(15px, 1.3vw, 17px);
+  font-weight: 500;
+  letter-spacing: 0.015em;
+}
+
+.price-badge--lg .price-badge__icon {
+  width: 18px;
+  height: 18px;
+}
+
 /* =========================================================
    Cobertura
    ========================================================= */
